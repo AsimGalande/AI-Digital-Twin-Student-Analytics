@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Records</title>
+</head>
+<body>
+
+<h1>Student Records</h1>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Subject</th>
+    <th>Study Hours</th>
+    <th>Sleep Hours</th>
+    <th>Screen Time</th>
+    <th>Attendance</th>
+    <th>Productivity</th>
+</tr>
+
+{% for row in data %}
+<tr>
+    {% for item in row %}
+        <td>{{ item }}</td>
+    {% endfor %}
+</tr>
+{% endfor %}
+
+</table>
+
+<br><br>
+
+<a href="/">Back to Home</a>
+
+</body>
+</html>

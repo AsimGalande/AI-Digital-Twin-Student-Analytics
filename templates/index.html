@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Digital Twin</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Digital Twin Study Planner</h1>
+
+    <form method="POST">
+
+        <label>Study Hours Today:</label>
+        <input type="number" name="study_hours" required>
+
+        <label>Sleep Hours:</label>
+        <input type="number" name="sleep_hours" required>
+
+        <label>Screen Time:</label>
+        <input type="number" name="screen_time" required>
+
+        <label>Attendance %:</label>
+        <input type="number" name="attendance" required>
+
+        <label>Previous Exam Score:</label>
+        <input type="number" name="exam_score" required>
+
+        <label>Subject:</label>
+        <input type="text" name="subject" required>
+
+        <label>Hours Required:</label>
+        <input type="number" name="hours" required>
+
+        <label>Difficulty:</label>
+
+        <select name="difficulty">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+
+        <button type="submit">
+            Generate Plan
+        </button>
+
+    </form>
+
+    <div class="result">
+        <pre>{{ result }}</pre>
+    </div>
+
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/history">History</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/graph">Graph</a>
+    </div>
+
+</div>
+
+</body>
+</html>
